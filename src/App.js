@@ -61,10 +61,10 @@ function App() {
                 <LeftSideNavbar/>
                 <Content style={{marginLeft: 200, marginTop: 70}}>
                        <div style={{display:'flex', justifyContent:'space-between'}}>
-                           <LineChartCard width={280} height={180} data={data} title={'Total Revenue'} summary={'12994$'}/>
-                           <LineChartCard width={280} height={180} data={data}/>
-                           <LineChartCard width={280} height={180} data={data}/>
-                           <LineChartCard width={280} height={180} data={data}/>
+                           <LineChartCard width={280} height={180} data={data} title={'Total Revenue'} summary={'12994$'} percentage={5.84} />
+                           <LineChartCard width={280} height={180} data={data} title={'Affiliate Revenue'} summary={'12994$'} percentage={5.84}/>
+                           <LineChartCard width={280} height={180} data={data} title={'Refunds'} summary={'0.00'} />
+                           <LineChartCard width={280} height={180} data={data} title={'Avg. Revenue Per User'} summary={'12994$'} percentage={-2.03}/>
 
                        </div>
                     <Divider/>

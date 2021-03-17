@@ -1,21 +1,32 @@
-import {START_GETTING_TABLE_DATA, STOP_GETTING_TABLE_DATA, GET_TABLE_DATA} from "./Types";
-import axios from "axios";
+import {GET_TABLE_DATA, START_GETTING_TABLE_DATA, STOP_GETTING_TABLE_DATA} from "./Types";
+import firebase from "../../firebaseConfig";
 
-export const getTableData=async (dispatch)=>{
+export const getTableData=()=>async (dispatch)=>{
   dispatch({
       type: START_GETTING_TABLE_DATA,
       payload: true
   });
-    try{
-    const request= await axios.get('https://github.com/rsuite/rsuite/blob/master/docs/public/data/users.json');
-    const data=request.data;
+    try {
+        await firebase
+            .database()
+            .ref()
+            .on('value', (snapshot)=>{
+                let dataSet=[];
+                snapshot.forEach(data=>{
+                    const dataVal=data.val();
+                    dataSet.push({
+                        ...dataVal
+                    });
 
-    if(request.status == 'ok'){
-        dispatch({
-            type: GET_TABLE_DATA,
-            payload: data
-        })
-     }
+                });
+                if (dataSet){
+                    dispatch({
+                        type: GET_TABLE_DATA,
+                        payload: dataSet
+                    })
+                }
+            })
+
     }
     catch (e) {
         dispatch({

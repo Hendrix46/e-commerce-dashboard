@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import RootReducer from "./redux/reducers/RootReducer";
-import {compose, createStore} from "redux";
+import {applyMiddleware, compose, createStore} from "redux";
+import thunk from "redux-thunk";
 
 
 const store= createStore(RootReducer,
-    compose(
+    compose(applyMiddleware(thunk),
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     ));
 ReactDOM.render(

@@ -5,7 +5,7 @@ import {Dropdown, Icon, Nav, Navbar} from "rsuite";
 function TopHeader({ onSelect, activeKey, ...props }) {
     return (
         <Navbar {...props}
-                style={{width: '100%',position:'fixed', zIndex: 999}}
+                style={{width: '100%',position:'fixed', zIndex: 999, backgroundColor: '#0E0C28'}}
         >
             <Navbar.Body>
                 <Nav onSelect={onSelect} activeKey={activeKey} pullRight>
@@ -20,7 +20,6 @@ function TopHeader({ onSelect, activeKey, ...props }) {
                         <Dropdown.Item eventKey="6">Contact</Dropdown.Item>
                     </Dropdown>
                 </Nav>
-
             </Navbar.Body>
         </Navbar>
     );

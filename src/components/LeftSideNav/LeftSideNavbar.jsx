@@ -14,7 +14,7 @@ function LeftSideNavbar(props) {
                     width={expand ? 190 : 56}
                     collapsible
                 >
-                    <Sidenav expanded={expand} defaultOpenKeys={['4']} appearance="inverse">
+                    <Sidenav expanded={expand} defaultOpenKeys={['4']} style={{backgroundColor: '#0E0C28'}}>
                         <Sidenav.Header>
                             <div onClick={handleToggle}>
                                 <p>LOGO Header</p>

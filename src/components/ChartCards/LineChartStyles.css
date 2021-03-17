@@ -1,0 +1,16 @@
+
+.card-content p{
+    color: #7979AB;
+    margin-left: 20px;
+}
+.card-content h4{
+    color: #3D405C;
+}
+.card-summary{
+    display: flex;
+    margin-left: 20px;
+}
+
+.card-content h6{
+    margin: auto!important;
+}

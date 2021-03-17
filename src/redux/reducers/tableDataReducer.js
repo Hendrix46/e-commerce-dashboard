@@ -20,6 +20,7 @@ export const tableDataReducer=(state=initialState , action)=>{
                 isLoading: payload
             };
         case GET_TABLE_DATA:
+            // console.log(payload, 'PAYLOAD')
             return {
                 ...state,
                 tableData: payload,

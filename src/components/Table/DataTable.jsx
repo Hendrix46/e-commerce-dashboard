@@ -1,14 +1,23 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import {Panel, Table} from "rsuite";
-import  fakeData from '../../fakeData';
-const {Column, HeaderCell, Cell, Pagination , ColumnGroup}=Table;
+import {useDispatch, useSelector} from "react-redux";
+import {getTableData} from "../../redux/actions";
+import {tableDataSelector} from "../../redux/selectors/TableDataSelector";
+
+const {Column, HeaderCell, Cell}=Table;
 function DataTable({width, height}) {
-    const dataSet = fakeData.filter((v, i) => i < 8);
-    const [data, setData]=useState(dataSet);
+
+    const dispatch= useDispatch();
+    useEffect(()=>{
+        dispatch(getTableData())
+    },[]);
+    const tableData= useSelector(tableDataSelector);
+    console.log(tableData, 'TABLEDATA');
+    const dataSet = tableData.filter((v, i) => i < 7);
     return (
         <div>
             <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: width }}>
-                <Table height={height} data={data}>
+                <Table height={height} data={dataSet}>
                     <Column width={50} align="center" resizable>
                         <HeaderCell>Id</HeaderCell>
                         <Cell dataKey="id" />
