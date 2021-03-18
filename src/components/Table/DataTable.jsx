@@ -5,43 +5,29 @@ import {getTableData} from "../../redux/actions";
 import {tableDataSelector} from "../../redux/selectors/TableDataSelector";
 
 const {Column, HeaderCell, Cell}=Table;
-function DataTable({width, height}) {
+function DataTable({width, height, columns, filterValue}) {
 
     const dispatch= useDispatch();
     useEffect(()=>{
         dispatch(getTableData())
     },[]);
     const tableData= useSelector(tableDataSelector);
-    console.log(tableData, 'TABLEDATA');
-    const dataSet = tableData.filter((v, i) => i < 7);
+
+    const dataSet = tableData.filter((v, i) => i < (filterValue ? filterValue : 8));
+
     return (
         <div>
             <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: width }}>
                 <Table height={height} data={dataSet}>
-                    <Column width={50} align="center" resizable>
-                        <HeaderCell>Id</HeaderCell>
-                        <Cell dataKey="id" />
-                    </Column>
-
-                    <Column width={100} resizable>
-                        <HeaderCell>First Name</HeaderCell>
-                        <Cell dataKey="firstName" />
-                    </Column>
-
-                    <Column width={100} resizable>
-                        <HeaderCell>Last Name</HeaderCell>
-                        <Cell dataKey="lastName" />
-                    </Column>
-
-                    <Column width={200} resizable>
-                        <HeaderCell>City</HeaderCell>
-                        <Cell dataKey="city" />
-                    </Column>
-
-                    <Column width={200} resizable>
-                        <HeaderCell>Company Name</HeaderCell>
-                        <Cell dataKey="companyName" />
-                    </Column>
+                    {(columns != undefined)?
+                        (columns.map((column)=>(
+                            <Column key={column.dataKey} width={column.width} align="center" resizable>
+                                <HeaderCell>{column.title}</HeaderCell>
+                                <Cell dataKey={column.dataKey} />
+                            </Column>
+                        ))):
+                        null
+                    }
                 </Table>
             </Panel>
         </div>

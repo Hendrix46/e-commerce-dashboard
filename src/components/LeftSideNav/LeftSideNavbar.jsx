@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Container, Dropdown, Icon, Nav, Sidebar, Sidenav} from "rsuite";
+import {Link} from "react-router-dom";
 
 function LeftSideNavbar(props) {
     const [expand, setexpand] = useState(true);
@@ -22,12 +23,17 @@ function LeftSideNavbar(props) {
                         </Sidenav.Header>
                         <Sidenav.Body>
                             <Nav>
-                                <Nav.Item eventKey="1" icon={<Icon icon="dashboard" />}>
-                                    Dashboard
-                                </Nav.Item>
-                                <Nav.Item eventKey="2" icon={<Icon icon="group" />}>
-                                    User Group
-                                </Nav.Item>
+                               <Link to='/'>
+                                   <Nav.Item  eventKey="1" icon={<Icon icon="dashboard" />}>
+                                       Dashboard
+                                   </Nav.Item>
+                               </Link>
+                                <Link to='/statistics'>
+                                    <Nav.Item eventKey="2" icon={<Icon icon="table" />}>
+                                        Statistics
+                                    </Nav.Item>
+                                </Link>
+
                                 <Nav.Item eventKey="3" icon={<Icon icon="dashboard" />}>
                                     Dashboard
                                 </Nav.Item>
