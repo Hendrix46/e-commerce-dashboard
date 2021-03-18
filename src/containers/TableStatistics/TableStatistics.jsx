@@ -10,7 +10,7 @@ function TableStatistics(props) {
         {
             title: 'Id',
             dataKey: 'id',
-            width: 50
+            width: 20
         },
         {
             title: 'First Name',
@@ -40,7 +40,7 @@ function TableStatistics(props) {
         {
             title: 'Zip Code',
             dataKey: 'zipCode',
-            width: 200
+            width: 150
         },
 
     ];
@@ -59,8 +59,8 @@ function TableStatistics(props) {
                     <Content style={{marginLeft: 200, marginTop: 70}}>
                         <div >
 
-                            <DataTable width={1100} height={800} columns={columnsStatistic} filterValue={20}/>
-                            <ExportTable/>
+                            {/*<DataTable width={1100} height={800} columns={columnsStatistic} filterValue={20}/>*/}
+                            <ExportTable filterValue={10} width={1100} height={800} columns={columnsStatistic}/>
                         </div>
                     </Content>
                     <Footer>Footer</Footer>

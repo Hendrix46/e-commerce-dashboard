@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
+import {useDispatch, useSelector} from "react-redux";
+import {tableDataSelector} from "../../redux/selectors/TableDataSelector";
+import {getTableData} from "../../redux/actions";
 
-function ExportTable(props) {
+function ExportTable({width, height, columns, filterValue}) {
+    const dispatch= useDispatch();
+    useEffect(()=>{
+        dispatch(getTableData())
+    },[]);
+    const tableData= useSelector(tableDataSelector);
+
+    const dataSet = tableData.filter((v, i) => i < (filterValue ? filterValue : 8));
     return (
-        <div>
+
+        <div className='table-responsive'>
             <ReactHTMLTableToExcel
                 id="test-table-xls-button"
                 className="download-table-xls-button"
@@ -11,22 +22,32 @@ function ExportTable(props) {
                 filename="tablexls"
                 sheet="tablexls"
                 buttonText="Download as XLS"/>
-            <table id="table-to-xls">
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Age</th>
-                </tr>
-                <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
-                </tr>
+            <table id="table-to-xls" className='table table-hover'>
+               <thead>
+               <tr>
+                   {(columns != undefined)?
+                       (columns.map((column)=>(
+                           <th  style={{width: column.width}} key={column.dataKey}>{column.title}</th>
+                       ))):
+                       null
+                   }
+               </tr>
+               </thead>
+                <tbody>
+                {dataSet.map((data)=>(
+                    <tr  key={data.id}>
+                        <td>{data.id}</td>
+                        <td>{data.firstName}</td>
+                        <td>{data.lastName}</td>
+                        <td>{data.city}</td>
+                        <td>{data.companyName}</td>
+                        <td>{data.email}</td>
+                        <td>{data.zipCode}</td>
+                    </tr>
+                ))}
+                </tbody>
+
+
             </table>
 
         </div>

@@ -10,10 +10,11 @@ import DataTable from "../../components/Table/DataTable";
 import AreaChartCard from "../../components/ChartCards/AreaChartCard";
 import PieChartCard from "../../components/ChartCards/PieChartCard";
 import BarChartCard from "../../components/ChartCards/BarChartCard";
+import {useTranslation} from "react-i18next";
 
 function Home(props) {
     const dispatch =useDispatch();
-
+    const {t}=useTranslation();
     const [activeKey, setActiveKey]=useState(null);
     const handleSelect=(eventKey)=> {
         setActiveKey(eventKey)
@@ -46,6 +47,11 @@ function Home(props) {
         {
             title: 'Company',
             dataKey: 'companyName',
+            width: 200
+        },
+        {
+            title: 'Email',
+            dataKey: 'email',
             width: 200
         },
 
@@ -83,7 +89,6 @@ function Home(props) {
                             <LineChartCard width={280} height={180} data={lineChartData} title={'Affiliate Revenue'} summary={'12994$'} percentage={5.84}/>
                             <LineChartCard width={280} height={180} data={lineChartData} title={'Refunds'} summary={'0.00'} />
                             <LineChartCard width={280} height={180} data={lineChartData} title={'Avg. Revenue Per User'} summary={'12994$'} percentage={-2.03}/>
-
                         </div>
                         <Divider/>
                         <div style={{display:'flex', justifyContent:'space-between'}}>

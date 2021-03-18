@@ -1,12 +1,30 @@
 import React, {useState} from 'react';
 import {Container, Dropdown, Icon, Nav, Sidebar, Sidenav} from "rsuite";
 import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
+
+
+const MyLink = React.forwardRef((props, ref) => {
+    const { href, as, ...rest } = props;
+    return (
+        <Link href={href} as={as} to={href}>
+            <Icon name='table'/>
+            <p ref={ref} {...rest} />
+        </Link>
+    );
+});
+
+const NavLink = props => <Nav.Item componentClass={MyLink} {...props} />;
 function LeftSideNavbar(props) {
+
+    const {t}=useTranslation();
     const [expand, setexpand] = useState(true);
     const handleToggle=()=> {
         setexpand(!expand)
     };
+
+
     return (
         <div className="show-fake-browser sidebar-page">
             <Container style={{height:'100vh', position:'fixed', marginTop:55}}>
@@ -15,54 +33,36 @@ function LeftSideNavbar(props) {
                     width={expand ? 190 : 56}
                     collapsible
                 >
-                    <Sidenav expanded={expand} defaultOpenKeys={['4']} style={{backgroundColor: '#0E0C28'}}>
+                    <Sidenav expanded={expand} defaultOpenKeys={['4']} style={{backgroundColor: '#0E0C28', height: '100vh'}}>
                         <Sidenav.Header>
                             <div onClick={handleToggle}>
                                 <p>LOGO Header</p>
                             </div>
                         </Sidenav.Header>
                         <Sidenav.Body>
+
                             <Nav>
-                               <Link to='/'>
-                                   <Nav.Item  eventKey="1" icon={<Icon icon="dashboard" />}>
-                                       Dashboard
-                                   </Nav.Item>
-                               </Link>
-                                <Link to='/statistics'>
-                                    <Nav.Item eventKey="2" icon={<Icon icon="table" />}>
-                                        Statistics
-                                    </Nav.Item>
-                                </Link>
-
-                                <Nav.Item eventKey="3" icon={<Icon icon="dashboard" />}>
-                                    Dashboard
-                                </Nav.Item>
-                                <Nav.Item eventKey="4" icon={<Icon icon="group" />}>
-                                    User Group
-                                </Nav.Item>
-                                <Nav.Item eventKey="5" icon={<Icon icon="dashboard" />}>
-                                    Dashboard
-                                </Nav.Item>
-                                <Nav.Item eventKey="6" icon={<Icon icon="group" />}>
-                                    User Group
-                                </Nav.Item>
-                                <Nav.Item eventKey="7" icon={<Icon icon="dashboard" />}>
-                                    Dashboard
-                                </Nav.Item>
-                                <Nav.Item eventKey="8" icon={<Icon icon="group" />}>
-                                    User Group
-                                </Nav.Item>
-                                <Nav.Item eventKey="9" icon={<Icon icon="dashboard" />}>
-                                    Dashboard
-                                </Nav.Item>
-                                <Nav.Item eventKey="10" icon={<Icon icon="group" />}>
-                                    User Group
-                                </Nav.Item>
-                                <Nav.Item eventKey="11" icon={<Icon icon="dashboard" />}>
-                                    Dashboard
-                                </Nav.Item>
-
+                                <NavLink href="/">Home</NavLink>
+                                <NavLink href="/statistics">Guide</NavLink>
+                                <NavLink href="/components/overview">Components</NavLink>
+                                <NavLink href="/tools/palette">Tools</NavLink>
                             </Nav>
+                            {/*<Nav>*/}
+                            {/*    <Nav.Item componentClass={NavLink} href="/">{t('SideBar.home')}</Nav.Item>*/}
+                            {/*   /!*<Link to='/'>*!/*/}
+                            {/*   /!*    <Nav.Item  eventKey="1" icon={<Icon icon="dashboard" />}>*!/*/}
+                            {/*   /!*        *!/*/}
+                            {/*   /!*        *!/*/}
+                            {/*   /!*    </Nav.Item>*!/*/}
+                            {/*   /!*</Link>*!/*/}
+                            {/*    <Link to='/statistics'>*/}
+                            {/*        <Nav.Item eventKey="2" icon={<Icon icon="table" />}>*/}
+                            {/*            {t('SideBar.statistics')}*/}
+                            {/*        </Nav.Item>*/}
+                            {/*    </Link>*/}
+
+
+                            {/*</Nav>*/}
                         </Sidenav.Body>
                     </Sidenav>
                 </Sidebar>

@@ -1,6 +1,6 @@
 import {
     GET_LINE_CHART_DATA,
-    GET_TABLE_DATA,
+    GET_TABLE_DATA, SET_LANGUAGE,
     START_GETTING_LINE_CHART_DATA,
     START_GETTING_TABLE_DATA, STOP_GETTING_LINE_CHART_DATA,
     STOP_GETTING_TABLE_DATA
@@ -75,5 +75,13 @@ export const getLineChartData=()=>async (dispatch)=>{
             type: STOP_GETTING_LINE_CHART_DATA,
             payload: true
         })
+    }
+};
+
+
+export const setLanguage=(language)=>{
+    return{
+        type: SET_LANGUAGE,
+        payload: language
     }
 };
