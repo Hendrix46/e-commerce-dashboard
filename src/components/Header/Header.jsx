@@ -3,8 +3,10 @@ import {Dropdown, Icon, Nav, Navbar} from "rsuite";
 import {useDispatch} from "react-redux";
 import {setLanguage} from "../../redux/actions";
 import i18n from '../../i18n/i18n';
+import {useTranslation} from "react-i18next";
 
 function TopHeader({ onSelect, activeKey, ...props }) {
+    const {t}=useTranslation();
     const dispatch=useDispatch();
     const onSelectLang = (eventKey, event) => {
         dispatch(setLanguage(eventKey));
@@ -16,10 +18,7 @@ function TopHeader({ onSelect, activeKey, ...props }) {
         >
             <Navbar.Body>
                 <Nav onSelect={onSelect} activeKey={activeKey} pullRight>
-
-                    <Nav.Item eventKey="2">News</Nav.Item>
-                    <Nav.Item eventKey="3">Products</Nav.Item>
-                    <Dropdown title="Language" onSelect={onSelectLang}>
+                    <Dropdown title={t("Header.language")} onSelect={onSelectLang}>
                         <Dropdown.Item eventKey="uz">Uzbek</Dropdown.Item>
                         <Dropdown.Item eventKey="ru">Russian</Dropdown.Item>
                         <Dropdown.Item eventKey="en">English</Dropdown.Item>

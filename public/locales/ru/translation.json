@@ -2,5 +2,14 @@
   "SideBar": {
     "home": "Главная",
     "statistics": "Статистика"
+  },
+  "Header": {
+    "language": "Виберите язык"
+  },
+  "LineChart": {
+    "totalRevenue": "Общий Доход",
+    "affilateRevenue": "Партнерский Доход",
+    "refunds": "Возвраты",
+    "averageRevenuePerUser": "Средний Доход На Пользователя"
   }
 }

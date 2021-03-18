@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de002d1c-4a70-4597-aee0-5bf00340b91b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/ru/translation.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/uz/translation.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n/i18n.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/languageReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LeftSideNav/SideBarStyless.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ru/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/uz/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/uz/translation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LeftSideNav/LeftSideNavbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftSideNav/LeftSideNavbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/ExportTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/ExportTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/HomeDashboard/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomeDashboard/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TableStatistics/TableStatistics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TableStatistics/TableStatistics.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/Types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/Types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/RootReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -89,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615803673912</updated>
       <workItem from="1615803680894" duration="25922000" />
-      <workItem from="1615993469039" duration="21729000" />
+      <workItem from="1615993469039" duration="23813000" />
     </task>
     <servers />
   </component>
@@ -125,10 +116,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="149" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616084492377" />
-    <state x="240" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616078043602">
+    <state x="240" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616087902361">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="240" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1616078043602" />
+    <state x="240" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1616087902361" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1615894719611">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

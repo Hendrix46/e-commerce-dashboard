@@ -85,10 +85,10 @@ function Home(props) {
                     <LeftSideNavbar/>
                     <Content style={{marginLeft: 200, marginTop: 70}}>
                         <div style={{display:'flex', justifyContent:'space-between'}}>
-                            <LineChartCard width={280} height={180} data={lineChartData} title={'Total Revenue'} summary={'12994$'} percentage={5.84} />
-                            <LineChartCard width={280} height={180} data={lineChartData} title={'Affiliate Revenue'} summary={'12994$'} percentage={5.84}/>
-                            <LineChartCard width={280} height={180} data={lineChartData} title={'Refunds'} summary={'0.00'} />
-                            <LineChartCard width={280} height={180} data={lineChartData} title={'Avg. Revenue Per User'} summary={'12994$'} percentage={-2.03}/>
+                            <LineChartCard width={280} height={180} data={lineChartData} title={t("LineChart.totalRevenue")} summary={'12994$'} percentage={5.84} />
+                            <LineChartCard width={280} height={180} data={lineChartData} title={t("LineChart.affilateRevenue")} summary={'12994$'} percentage={5.84}/>
+                            <LineChartCard width={280} height={180} data={lineChartData} title={t("LineChart.refunds")} summary={'0.00'} />
+                            <LineChartCard width={280} height={180} data={lineChartData} title={t("LineChart.averageRevenuePerUser")} summary={'12994$'} percentage={-2.03}/>
                         </div>
                         <Divider/>
                         <div style={{display:'flex', justifyContent:'space-between'}}>

@@ -6,7 +6,7 @@ import './LineChartStyles.css'
 function LineChartCard({height, width, title, summary, data, percentage}) {
 
     return (
-        <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 280, height:height }}>
+        <Panel shaded bordered bodyFill style={{ display: 'inline-block', width: 280, height:height ,padding: 5  }}>
             <div className='card-content'>
                 <p>{title}</p>
                 <div className='card-summary'>
@@ -22,7 +22,7 @@ function LineChartCard({height, width, title, summary, data, percentage}) {
                     margin={{
                         top: 0,
                         right: 20,
-                        left: 20,
+                        left: 10,
                         bottom: 10,
                     }}
                 >

@@ -2,5 +2,14 @@
   "SideBar": {
     "home": "Home",
     "statistics": "Statistics"
+  },
+  "Header": {
+    "language": "Language"
+  },
+  "LineChart": {
+    "totalRevenue": "Total Revenue",
+    "affilateRevenue": "Affilate Revenue",
+    "refunds": "Refunds",
+    "averageRevenuePerUser": "Average Revenue Per User"
   }
 }

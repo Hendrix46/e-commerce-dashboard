@@ -1,0 +1,15 @@
+.sidebar{
+    height: 100vh;
+    position: fixed;
+    margin-top: 55px;
+    z-index: 999;
+}
+.sidebar .sidebarNav{
+    background-color: #0E0C28;
+    height: 100vh;
+}
+.sidebarNavItem a:hover{
+    background-color: #1675E0!important;
+    color: #fff!important;
+    text-decoration: none;
+}

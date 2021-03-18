@@ -2,5 +2,14 @@
   "SideBar": {
     "home": "Bosh Sahifa",
     "statistics": "Statistika"
+  },
+  "Header": {
+    "language": "Tilni Tanlash"
+  },
+  "LineChart": {
+    "totalRevenue": "Jami Daromad",
+    "affilateRevenue": "Hamkorlik Daromadi",
+    "refunds": "Pul qaytarishlar",
+    "averageRevenuePerUser": "O'rtacha daromad"
   }
 }
