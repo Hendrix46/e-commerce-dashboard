@@ -11,5 +11,17 @@
     "affilateRevenue": "Партнерский Доход",
     "refunds": "Возвраты",
     "averageRevenuePerUser": "Средний Доход На Пользователя"
+  },
+  "Exportable": {
+    "exportButton": "Экспортировать в формате XLS"
+  },
+  "TableColumns": {
+    "id": "Id",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "companyName": "Название Компании",
+    "email": "Эмейл",
+    "zipCode": "Почтовый индекс",
+    "city": "Город"
   }
 }

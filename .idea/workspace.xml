@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de002d1c-4a70-4597-aee0-5bf00340b91b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LeftSideNav/SideBarStyless.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ru/translation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/locales/uz/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/uz/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LeftSideNav/LeftSideNavbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftSideNav/LeftSideNavbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HomeDashboard/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomeDashboard/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/ExportTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/ExportTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/TableStatistics/TableStatistics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TableStatistics/TableStatistics.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615803673912</updated>
       <workItem from="1615803680894" duration="25922000" />
-      <workItem from="1615993469039" duration="23813000" />
+      <workItem from="1615993469039" duration="24863000" />
     </task>
     <servers />
   </component>

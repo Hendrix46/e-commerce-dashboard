@@ -3,6 +3,7 @@ import ReactHTMLTableToExcel from "react-html-table-to-excel";
 import {useDispatch, useSelector} from "react-redux";
 import {tableDataSelector} from "../../redux/selectors/TableDataSelector";
 import {getTableData} from "../../redux/actions";
+import {useTranslation} from "react-i18next";
 
 function ExportTable({width, height, columns, filterValue}) {
     const dispatch= useDispatch();
@@ -10,7 +11,7 @@ function ExportTable({width, height, columns, filterValue}) {
         dispatch(getTableData())
     },[]);
     const tableData= useSelector(tableDataSelector);
-
+    const {t}=useTranslation();
     const dataSet = tableData.filter((v, i) => i < (filterValue ? filterValue : 8));
     return (
 
@@ -21,7 +22,7 @@ function ExportTable({width, height, columns, filterValue}) {
                 table="table-to-xls"
                 filename="tablexls"
                 sheet="tablexls"
-                buttonText="Download as XLS"/>
+                buttonText={t("Exportable.exportButton")}/>
             <table id="table-to-xls" className='table table-hover'>
                <thead>
                <tr>

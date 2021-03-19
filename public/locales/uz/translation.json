@@ -11,5 +11,17 @@
     "affilateRevenue": "Hamkorlik Daromadi",
     "refunds": "Pul qaytarishlar",
     "averageRevenuePerUser": "O'rtacha daromad"
+  },
+  "Exportable": {
+    "exportButton": "XLS formatida yuklab olish"
+  },
+  "TableColumns": {
+    "id": "Id",
+    "firstName": "Ism",
+    "lastName": "Familya",
+    "companyName": "Kompaniya nomi",
+    "email": "Email",
+    "zipCode": "Pochta raqami",
+    "city": "Shahar"
   }
 }

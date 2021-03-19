@@ -11,5 +11,17 @@
     "affilateRevenue": "Affilate Revenue",
     "refunds": "Refunds",
     "averageRevenuePerUser": "Average Revenue Per User"
+  },
+  "Exportable": {
+    "exportButton": "Download as XLS"
+  },
+  "TableColumns": {
+    "id": "Id",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "companyName": "Company Name",
+    "email": "Email",
+    "zipCode": "Zip Code",
+    "city": "City"
   }
 }

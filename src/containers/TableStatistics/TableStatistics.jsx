@@ -4,41 +4,43 @@ import TopHeader from "../../components/Header/Header";
 import LeftSideNavbar from "../../components/LeftSideNav/LeftSideNavbar";
 import DataTable from "../../components/Table/DataTable";
 import ExportTable from "../../components/Table/ExportTable";
+import {useTranslation} from "react-i18next";
 
 function TableStatistics(props) {
+    const {t}=useTranslation();
     const columnsStatistic=[
         {
-            title: 'Id',
+            title: t("TableColumns.id"),
             dataKey: 'id',
             width: 20
         },
         {
-            title: 'First Name',
+            title: t("TableColumns.firstName"),
             dataKey: 'firstName',
             width: 100
         },
         {
-            title: 'Last Name',
+            title: t("TableColumns.lastName"),
             dataKey: 'lastName',
             width: 100
         },
         {
-            title: 'City',
+            title: t("TableColumns.city"),
             dataKey: 'city',
             width: 100
         },
         {
-            title: 'Company',
+            title: t("TableColumns.companyName"),
             dataKey: 'companyName',
             width: 200
         },
         {
-            title: 'Email',
+            title: t("TableColumns.email"),
             dataKey: 'email',
             width: 200
         },
         {
-            title: 'Zip Code',
+            title: t("TableColumns.zipCode"),
             dataKey: 'zipCode',
             width: 150
         },
