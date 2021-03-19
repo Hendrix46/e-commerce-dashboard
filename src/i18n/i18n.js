@@ -17,7 +17,7 @@ i18n
     .use(initReactI18next)
 
     .init({
-        fallbackLng: "ru",
+        fallbackLng: "uz",
         debug: false,
         defaultNS: "translation",
         whitelist: Languages,
