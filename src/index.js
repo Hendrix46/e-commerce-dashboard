@@ -10,8 +10,7 @@ import thunk from "redux-thunk";
 import {BrowserRouter as Router} from "react-router-dom";
 
 const store= createStore(RootReducer,
-    compose(applyMiddleware(thunk),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    compose(applyMiddleware(thunk)
     ));
 ReactDOM.render(
   <React.StrictMode>
